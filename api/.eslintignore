@@ -1,0 +1,12 @@
+*/.js
+*/.cjs
+build
+dist
+node_modules/
+.npm
+.eslintcache
+*.tgz
+.env
+.env.*
+.vscode/*
+.history/
