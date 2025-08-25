@@ -2,6 +2,45 @@
 
 VarejoAPI é uma API REST, implementada no padrão MVC, que expõe um endpoint para um recurso de Produtos.
 
+## Quickstart
+
+```
+npm i
+npm run dev
+```
+
+Endereço: `http://localhost:3000`
+
+## Endpoints
+
+Criar Produto
+POST
+/product
+
+Listar Todos Produtos
+GET
+/product
+
+Buscar Produto Por ID
+GET
+/product/:id
+
+Buscar Produto Por Nome
+GET
+/product/name/:name
+
+Alterar Produto
+PUT
+/product/:id
+
+Deletar Produto
+DELETE
+/product/:id
+
+Total de Produtos
+GET
+/count
+
 ## Arquitetura do Software
 
 A arquitetura segue o padrão MVC e está detalhada no arquivo [docs](docs/Architecture.md).

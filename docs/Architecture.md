@@ -6,6 +6,8 @@ VarejoAPI é uma API REST, implementada no padrão MVC, que expõe um endpoint p
 
 A API segue uma arquitetura em camadas com separação clara de responsabilidades.
 
+![Arquitetura](Architecture.png)
+
 ## Estrutura de Diretórios
 
 ```
@@ -39,6 +41,10 @@ Responsáveis por gerenciar a camada de dados da aplicação. O Repository é qu
 ### Models
 
 Models definem entidades de domínio, como um Produto. Os Models definem a estrutura de dados, tipos e validações para cada entidade no domínio da nossa aplicação.
+
+## Modelagem
+
+![UML](UML.png)
 
 ## Tecnologias
 
