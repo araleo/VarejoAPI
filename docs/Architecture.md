@@ -116,3 +116,84 @@ class ProductService {
 - Testabilidade: Dependency injection facilita mocks
 - Manutenibilidade: Código organizado e previsível
 - Flexibilidade: Fácil troca de implementações
+
+## Modelo do Produto
+
+```
+{
+"name": string,
+"description": string,
+"price": number,
+"category": string
+}
+```
+
+## Endpoints da API
+
+A API expõe os seguintes endpoints para gerenciamento de produtos:
+
+### Produtos
+
+#### Criar Produto
+
+```
+POST /api/products
+Content-Type: application/json
+Body: Produto
+```
+
+- **Retorno**: 201 Created com o Produto criado
+
+#### Listar Todos os Produtos
+
+```
+GET /api/products
+```
+
+- **Retorno**: 200 OK com array de Produtos
+
+#### Buscar Produto por ID
+
+```
+GET /api/products/:id
+```
+
+- **Parâmetro**: ID único do produto (UUID)
+- **Retorno**: 200 OK com Produto ou 404 Not Found
+
+#### Buscar Produtos por Nome
+
+```
+GET /api/products/name/:name
+```
+
+- **Parâmetro**: Nome exato do produto
+- **Retorno**: 200 OK com array de Produtos (vazio se não encontrado)
+
+#### Atualizar Produto
+
+```
+PUT /api/products/:id
+Content-Type: application/json
+Body: Produto
+```
+
+- **Retorno**: 200 OK com Produto atualizado ou 404 Not Found
+
+#### Deletar Produto
+
+```
+DELETE /api/products/:id
+```
+
+- **Retorno**: 204 No Content se sucesso ou 404 Not Found
+
+### Estatísticas
+
+#### Contar Total de Produtos
+
+```
+GET /api/products/count
+```
+
+- **Retorno**: 200 OK com `{ "count": number }`
