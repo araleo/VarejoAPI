@@ -1,5 +1,9 @@
 import db from "./connection";
 
+/*
+Initialize the database and create necessary tables.
+*/
+
 export const initializeDatabase = () => {
   console.log("Initializing database...");
 

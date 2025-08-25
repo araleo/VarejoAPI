@@ -1,6 +1,10 @@
 import { Product } from "../models/Product";
 import { ProductRepository } from "../repositories/product-repository";
 
+/*
+ProductService class handles business related logic.
+*/
+
 export class ProductService {
   constructor(private readonly productRepository: ProductRepository) {}
 

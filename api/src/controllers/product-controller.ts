@@ -2,6 +2,10 @@ import { RequestHandler } from "express";
 import { productService } from "../containers/product-container";
 import { productSchema } from "../models/Product";
 
+/*
+Controller for handling product-related requests.
+*/
+
 export const handleCreateProduct: RequestHandler = async (req, res) => {
   const product = req.body;
 

@@ -1,6 +1,10 @@
 import Database from "better-sqlite3";
 import { Product, productSchema } from "../models/Product";
 
+/*
+ProductRepository class handles data access related operations.
+*/
+
 export class ProductRepository {
   constructor(private readonly db: Database.Database) {}
 
