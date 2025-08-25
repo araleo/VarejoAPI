@@ -1,7 +1,8 @@
+import { randomUUID } from "crypto";
 import { z } from "zod";
 
 export const productSchema = z.object({
-  id: z.string(),
+  id: z.string().default(() => randomUUID()),
   name: z.string().min(2).max(100),
   description: z.string().max(500).optional(),
   price: z.number().min(0),

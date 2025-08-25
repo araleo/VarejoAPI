@@ -20,7 +20,7 @@ app.use(compression());
 
 app.use(bodyParser.json());
 
-app.use("/products", productRouter);
+app.use("/product", productRouter);
 
 app.get("/health", (_req, res) => {
   res.status(200).json({
