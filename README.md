@@ -11,6 +11,10 @@ npm run dev
 
 Endereço: `http://localhost:3000`
 
+## Documentação
+
+A documentação completa, incluindo arquitetura, modelagem UML e referências encontra-se na pasta [docs](docs)
+
 ## Endpoints
 
 Criar Produto
