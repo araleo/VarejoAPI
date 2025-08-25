@@ -52,14 +52,14 @@ export class ProductRepository {
     }
   }
 
-  public async findProductByName(name: string): Promise<Product | null> {
+  public async findProductByName(name: string): Promise<Product[]> {
     try {
       const stmt = this.db.prepare("SELECT * FROM products WHERE name = ?");
-      const row = stmt.get(name);
-      return row ? this.mapDatabaseToProduct(row) : null;
+      const rows = stmt.all(name);
+      return rows.map((row) => this.mapDatabaseToProduct(row));
     } catch (error) {
-      console.error("Error finding product by name:", error);
-      return null;
+      console.error("Error finding products by name:", error);
+      return [];
     }
   }
 

@@ -16,7 +16,7 @@ export class ProductService {
     return await this.productRepository.findProductById(id);
   }
 
-  public async getProductByName(name: string): Promise<Product | null> {
+  public async getProductByName(name: string): Promise<Product[]> {
     return await this.productRepository.findProductByName(name);
   }
 

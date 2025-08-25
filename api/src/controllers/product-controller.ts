@@ -39,12 +39,8 @@ export const handleGetProductByName: RequestHandler = async (req, res) => {
     return res.status(400).json({ error: "Product name is required" });
   }
 
-  const product = await productService.getProductByName(name);
-  if (!product) {
-    return res.status(404).json({ error: "Product not found" });
-  }
-
-  res.status(200).json(product);
+  const products = await productService.getProductByName(name);
+  res.status(200).json(products);
 };
 
 export const handleUpdateProduct: RequestHandler = async (req, res) => {
